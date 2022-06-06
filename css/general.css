@@ -188,15 +188,21 @@ body{
 }
 
 
+ 
 
 
-.btn:link ,.btn:visited{
+.btn,.btn:link ,.btn:visited{
     display:inline-block;
     font-size: 2rem;
     padding: 1.6rem 3.2rem;
     text-decoration: none;
     border-radius:10px;
     font-weight:600;
+    border:none;
+    cursor: pointer;
+
+    font-family:inherit;
+      
       /* put transition on original state 
       
       => therefore it is used to do button animation such as hover btn timming 
@@ -234,6 +240,18 @@ transition: all  0.3s;
 
 }
 
+.btn--form {
+    background-color: #4b3501;
+    color: #fef4dc;
+    align-self: end;
+    padding: 1.2rem;
+}
+
+
+.btn--form:hover  {
+    background-color: #fff;
+    color:#4b3501 ;
+}
 
 .link:link,
 .link:visited{
@@ -277,6 +295,12 @@ transition: all  0.3s;
 
 strong {
     font-weight:500;
+}
+
+
+*:focus{
+    outline:none;
+    box-shadow:0 0 0 0.3rem rgba(225, 159, 5, 0.5);
 }
 
 
