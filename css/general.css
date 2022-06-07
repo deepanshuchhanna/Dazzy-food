@@ -136,6 +136,13 @@ body{
 
 }
 
+/* to get 5 cols   */
+.grid--5-cols {
+
+    grid-template-columns: repeat(5, 1fr);
+
+}
+
 /*  to get grid center vertically */
 
 .grid--center-v {
