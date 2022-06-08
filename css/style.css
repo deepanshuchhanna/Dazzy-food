@@ -475,7 +475,7 @@ color: #e19e05;
 }
 
 .gallery-item img:hover {
-    transform:scale(1.1);
+    transform:scale(1.2);
 }
 
 
@@ -708,6 +708,10 @@ strong {
     box-shadow: 0 1px 2px rgba( 0, 0 ,0, 0.1);
 }
 
+.cta-form option {
+    background-color: #f9eccd;
+}
+
 
 
 .cta-form input::placeholder {
@@ -752,7 +756,9 @@ strong {
 .footer-logo {
     display: block;
     margin-bottom: 3.2rem;
+
 }
+
 
 
 .social-links {
@@ -777,7 +783,7 @@ strong {
 
 .footer-heading {
     font-size: 1.8rem;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 3.2rem;
 }
 
@@ -810,8 +816,7 @@ transition: all 0.3s;
 
 .footer-link:hover,
 .footer-link:active{
- 
-color: #555;
+color: #333;
 }
 
 
