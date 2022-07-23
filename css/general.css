@@ -50,289 +50,240 @@
 
 
 */
-*{
-    padding:0;
-    margin:0;
-    box-sizing:border-box;
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
-
-html{
-    font-size:62.5%;
+html {
+	font-size: 62.5%;
+	overflow-x: hidden;
 }
 
-body{
-    font-family:"Rubik",sans-serif;
-    line-height: 1;
-    font-weight:400;
-    color:#343a40;
-  
+body {
+	font-family: "Rubik", sans-serif;
+	line-height: 1;
+	font-weight: 400;
+	color: #343a40;
+	/*  it only works if there is nothing absolutely posotioned in relation to body */
+	overflow-x: hidden;
 }
-
-
-
-
-
-
 
 /* ***************************** */
 /* GENERAL REUSABLE COMPONENTS-SECTION */
 /* ***************************** */
 
-
-  .container {
-    max-width:120rem;  
-    margin: 0 auto;
-    padding:0 3.2rem; 
-     
+.container {
+	max-width: 120rem;
+	margin: 0 auto;
+	padding: 0 3.2rem;
 }
- 
+
 /* reusable grid part */
 
-    .grid{
-    display:grid;
-    column-gap: 6.4rem ;
-    row-gap: 9.6rem;
+.grid {
+	display: grid;
+	column-gap: 6.4rem;
+	row-gap: 9.6rem;
 
-    /* margin-bottom: 9.6rem; */
-
-}  
+	/* margin-bottom: 9.6rem; */
+}
 
 /* two ways to write the grid for margin-bottom  */
 /* method -1  */
-
 
 /* .grid:last-child {
     margin-bottom: 0;
 } */
 
-
 /* method -2  */
-.grid:not(:last-child ){
-    margin-bottom: 9.6rem;
-
+.grid:not(:last-child) {
+	margin-bottom: 9.6rem;
 }
 
-
 /* to get 2 cols  */
-    .grid--2-cols{
-
-    grid-template-columns: repeat(2, 1fr);
-
+.grid--2-cols {
+	grid-template-columns: repeat(2, 1fr);
 }
 
 /* to get 3 cols   */
-     .grid--3-cols {
-
-    grid-template-columns: repeat(3, 1fr);
-
+.grid--3-cols {
+	grid-template-columns: repeat(3, 1fr);
 }
-
 
 /* to get 4 cols   */
 .grid--4-cols {
-
-    grid-template-columns: repeat(4, 1fr);
-
+	grid-template-columns: repeat(4, 1fr);
 }
 
 /* to get 5 cols   */
-.grid--5-cols {
-
-    grid-template-columns: repeat(5, 1fr);
-
-}
+/* .grid--5-cols {
+	grid-template-columns: repeat(5, 1fr);
+} */
 
 /*  to get grid center vertically */
 
 .grid--center-v {
-    align-items: center ;
-
+	align-items: center;
 }
 
-.heading-primary,.heading-secondary,.heading-tertiary {
-    color:#4b3501;
-    font-weight: 700;  
-    letter-spacing: -0.5px;
-     
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+	color: #4b3501;
+	font-weight: 700;
+	letter-spacing: -0.5px;
 }
 
-
-
-.heading-primary{
-    font-size: 5.2rem;
-    line-height: 1.05 ;
-    margin-bottom: 3.2rem;
- 
+.heading-primary {
+	font-size: 5.2rem;
+	line-height: 1.05;
+	margin-bottom: 3.2rem;
 }
-
 
 .heading-secondary {
-    font-size: 4.4rem;  
-    line-height: 1.2;
-    margin-bottom: 9.6rem;
-
+	font-size: 4.4rem;
+	line-height: 1.2;
+	margin-bottom: 9.6rem;
 }
 
 .heading-tertiary {
-    font: size 3rem;
-    line-height:1.2;
-    margin-bottom:3.2rem;
-
-   
+	font: size 3rem;
+	line-height: 1.2;
+	margin-bottom: 3.2rem;
 }
 
 .subheading {
- 
-    display: block;
-    font-size:1.6rem;
-    font-weight:700;
-    color:#e19e05;
-    text-transform: uppercase;
-    margin-bottom:1.6rem;
-    letter-spacing: 0.75px;
-      
+	display: block;
+	font-size: 1.6rem;
+	font-weight: 700;
+	color: #e19e05;
+	text-transform: uppercase;
+	margin-bottom: 1.6rem;
+	letter-spacing: 0.75px;
 }
 
+.btn,
+.btn:link,
+.btn:visited {
+	display: inline-block;
+	font-size: 2rem;
+	padding: 1.6rem 3.2rem;
+	text-decoration: none;
+	border-radius: 10px;
+	font-weight: 600;
+	border: none;
+	cursor: pointer;
 
- 
+	font-family: inherit;
 
-
-.btn,.btn:link ,.btn:visited{
-    display:inline-block;
-    font-size: 2rem;
-    padding: 1.6rem 3.2rem;
-    text-decoration: none;
-    border-radius:10px;
-    font-weight:600;
-    border:none;
-    cursor: pointer;
-
-    font-family:inherit;
-      
-      /* put transition on original state 
+	/* put transition on original state 
       
       => therefore it is used to do button animation such as hover btn timming 
       
       => we use all keyword to  select the background -color and text color */
-transition: all  0.3s;
-/* 1s = 1000ms  */
+	transition: all 0.3s;
+	/* 1s = 1000ms  */
 }
 
-.btn-full:link,.btn-full:visited{
-    background-color:#fab005;
-    color:#fff;
+.btn-full:link,
+.btn-full:visited {
+	background-color: #fab005;
+	color: #fff;
 }
 
-.btn-full:hover,.btn-full:active{
-    background-color:#e19e05;
-
+.btn-full:hover,
+.btn-full:active {
+	background-color: #e19e05;
 }
 
-
-.btn-outline:link,.btn-outline:visited{
-    background-color:#fff;
-    color:#555;
-
+.btn-outline:link,
+.btn-outline:visited {
+	background-color: #fff;
+	color: #555;
 }
-  
 
+.btn-outline:hover,
+.btn-outline:active {
+	/* background-color:  #feefcd; */
+	background-color: #fef4dc;
+	/* trick to add border inside  */
 
-.btn-outline:hover,.btn-outline:active{
-    /* background-color:  #feefcd; */
-    background-color:#fef4dc;
-    /* trick to add border inside  */
-
-    box-shadow: inset 0 0 0 2px #fff;
-
+	box-shadow: inset 0 0 0 2px #fff;
 }
 
 .btn--form {
-    background-color: #4b3501;
-    color: #fef4dc;
-    align-self: end;
-    padding: 1.2rem;
+	background-color: #4b3501;
+	color: #fef4dc;
+	align-self: end;
+	padding: 1.2rem;
 }
 
-
-.btn--form:hover  {
-    background-color: #fff;
-    color:#4b3501 ;
+.btn--form:hover {
+	background-color: #fff;
+	color: #4b3501;
 }
 
 .link:link,
-.link:visited{
-    display: inline-block;
-    color:#fab005;
-    text-decoration: none;
-    border-bottom: 1px solid currentColor;
-    padding-bottom: 2px;
-    transition-property: all 0.3s;
-
+.link:visited {
+	display: inline-block;
+	color: #fab005;
+	text-decoration: none;
+	border-bottom: 1px solid currentColor;
+	padding-bottom: 2px;
+	transition-property: all 0.3s;
 }
 
 .link:hover,
 .link:active {
-    color:#e19e05; 
-    border-bottom: 1px solid transparent;
+	color: #e19e05;
+	border-bottom: 1px solid transparent;
 }
-
-
 
 /* using helper classes  */
-.margin-right-sm { 
-    margin-right: 1.6rem !important;
+.margin-right-sm {
+	margin-right: 1.6rem !important;
 }
 
-
-.center-text{
-     text-align: center;
+.center-text {
+	text-align: center;
 }
-
 
 .margin-right-sm {
-    margin-right: 1.6rem !important;
+	margin-right: 1.6rem !important;
 }
- 
+
 .margin-bottom-md {
-    margin-bottom:4.8rem !important;  
+	margin-bottom: 4.8rem !important;
 }
-
-
 
 strong {
-    font-weight:500;
+	font-weight: 500;
 }
 
-
-*:focus{
-    outline:none;
-    box-shadow:0 0 0 0.3rem rgba(225, 159, 5, 0.5);
+*:focus {
+	outline: none;
+	box-shadow: 0 0 0 0.3rem rgba(225, 159, 5, 0.5);
 }
 
+.list {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 1.6rem;
+}
 
-
-.list{
-    list-style:none;
-    display: flex;
-    flex-direction: column;
-    gap: 1.6rem;
-   
-
-} 
-
-.list-items { 
-     font-size:1.8rem;
-     display:flex;
-     align-items:center;
-     gap: 1.6rem;
+.list-items {
+	font-size: 1.8rem;
+	display: flex;
+	align-items: center;
+	gap: 1.6rem;
+	line-height: 1.2;
 }
 
 .list-icon {
-    width:3rem;
-    height:3rem;
-    color: #e19e05;
+	width: 3rem;
+	height: 3rem;
+	color: #e19e05;
 }
-
-
-

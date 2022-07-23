@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- very important line to write media queries -->
     <meta
       name="viewport"
-      content="width=
+      content="width=device-width
     , initial-scale=1.0"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,13 +21,16 @@
 
     <link href="css/general.css" rel="stylesheet"/>  
     <link href="css/style.css" rel="stylesheet" />
+    <link href="css/queries.css" rel="stylesheet" />
     <title>Dazzy-Food</title>
   </head>
   <body>
-  <header class="header">
+  <header class="header ">
       <a href="#">
         <img class="logo" src="img/logos/logo10.png" alt="Dazzy-Food logo" />
       </a>
+
+
 
       <nav class="main-nav">
 
@@ -38,7 +42,10 @@
           <li><a class="main-nav-link nav-cta"   href="#">Try for free</a></li>
 
         </ul>
-      </nav>        
+      </nav>     
+      
+      <button class="btn-mobile-nav" ><ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon> 
+     <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon> </button>
 </header>
 
 <main>
@@ -544,11 +551,11 @@
 
           <p class="address">
             
-            623 Harrison St., 2nd Floor, San Francisco, CA 94107
+            369 i-Digital Zone, Phase -II, Gurgaon, Haryana 122010
           </p>
           <p >
 
-            <a class="footer-link" href="tel:415-201-6370" >415-201-6370</a><br/>
+            <a class="footer-link" href="tel:415-201-6370" >868-482-9048</a><br/>
             <a class="footer-link" href="mailto:hello@dazzyfood.com ">help@dazzyfood.com </a>
           </p> 
                
