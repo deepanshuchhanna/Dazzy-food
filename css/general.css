@@ -59,6 +59,9 @@
 html {
 	font-size: 62.5%;
 	overflow-x: hidden;
+
+	/*  does not work on safari and on MS edge  so, for that we have written js code*/
+	/* scroll-behavior: smooth; */
 }
 
 body {
